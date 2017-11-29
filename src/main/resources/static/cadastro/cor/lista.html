@@ -1,0 +1,23 @@
+<button ui-sref="cor-novo" title="Novo">Novo</button>
+<table class="table table-hover" >
+    <thead>
+    <tr >
+        <th>#</th>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Operaçã</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="cor in cores" >
+        <th scope="row">1</th>
+        <td>{{cor.id}}</td>
+        <td>{{cor.descricao}}</td>
+        <td>
+            <button class="btn btn-danger" ng-click="remover(cor.id)">Remover</button>
+            <button class="btn btn-info" ui-sref="cor-edita({id:cor.id})">Editar</button>
+        </td>
+    </tr>
+        </tbody>
+</table>
